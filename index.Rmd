@@ -1,7 +1,7 @@
 ---
 title: "Time Series Signal Detection using Polynomial Phase Demodulation"
 author: 'Wesley S. Burr -- <a href="http://www.trentu.ca/math/">Trent University</a> <br> <a href="http://github.com/wesleyburr"><i class="fa fa-github fa-fw"></i>&nbsp; wsburr</a><br> <a href="http://twitter.com/wsburr"> <i class="fa fa-twitter fa-fw"></i>&nbsp; @wsburr</a><br> <a href="mailto:wesleyburr@trentu.ca"><i class="fa fa-paper-plane fa-fw"></i>&nbsp; wesleyburr@trentu.ca</a><br>'
-date: 2023-12-14 &ensp; <br><br> Slides available at <http://bit.ly/asc2023>
+date: 2023-12-14 &ensp; <br><br> Slides available at <http://bit.ly/asc2023_wsb>
 output:
   xaringan::moon_reader:
     chakra: remark-latest.min.js
@@ -334,7 +334,7 @@ class: inverse, middle
 - Contact me: [Email](mailto:wesleyburr@trentu.ca) or [Twitter](https://twitter.com/wsburr)
 - Joint work with Glen Takahara, Kian Blanchette, and Ben Ott
 - Slides created via the R package [xaringan](https://github.com/yihui/xaringan) by Yihui Xie
-- Slides and source at <http://bit.ly/asc2023>
+- Slides and source at <http://bit.ly/asc2023_wsb>
 
 <br/>
 
@@ -361,3 +361,15 @@ frequencies, of the frequency modulated signals.
 ## Linear Modulation, Simulation
 
 ![Linear Modulation, White Noise Background](figure/linmod.png)
+
+---
+
+## SOHO, Spectrum
+
+![Power Spectrum, SOHO Data](figure/SOHOFinalSpectrum.png)
+
+---
+
+## FM Signals, Detected
+
+![Detection of FM Signals in SOHO Data](figure/F4PrimeFull.png)

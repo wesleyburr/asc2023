@@ -19,7 +19,7 @@ class: center, middle, inverse, title-slide
 ### Wesley S. Burr – <a href="http://www.trentu.ca/math/">Trent University</a> <br> <a href="http://github.com/wesleyburr"><i class="fa fa-github fa-fw"></i>  wsburr</a><br> <a href="http://twitter.com/wsburr"> <i class="fa fa-twitter fa-fw"></i>  <span class="citation">@wsburr</span></a><br> <a href="mailto:wesleyburr@trentu.ca"><i class="fa fa-paper-plane fa-fw"></i>  wesleyburr@trentu.ca</a><br>
 ]
 .date[
-### 2023-12-14   <br><br> Slides available at <a href="http://bit.ly/asc2023" class="uri">http://bit.ly/asc2023</a>
+### 2023-12-14   <br><br> Slides available at <a href="http://bit.ly/asc2023_wsb" class="uri">http://bit.ly/asc2023_wsb</a>
 ]
 
 ---
@@ -31,14 +31,10 @@ class: inverse
 
 ## Time Series Data
 
-The problem I'd like to talk with you about is centered in *structured* time 
-series data. These time series are assuming to be
-contiguous observations of phenomena, recorded with respect to an index variable
-labeled as "time". 
+Today's problem is from the realm of structured scientific time series data. We have:
 
---
+-- 
 
-&lt;br/&gt;
 * assumptions about partial stationarity, namely
 
 --
@@ -64,10 +60,6 @@ time series.
 
 * earliest was Schuster's *periodicities* in geophysical data (1898, 1899, 1906, 1911)
 
---
-
-* sometimes referred to as **harmonics**, and their study as **harmonic analysis**.
-
 ---
 
 class: inverse
@@ -79,7 +71,7 @@ What's the model for these *signals*?
 --
 
 $$
-cos(2\pi f t + \theta)
+\alpha cos(2\pi f t + \theta)
 $$
 
 ---
@@ -189,7 +181,7 @@ With Kian Blanchette, we developed a new test statistic.
 
 --
 
-* if a polynomially modulated signal, order `\(P\)` in modulation, is present, we have, asymptotically, that
+* if a polynomially modulated signal, order `\(P\)` in modulation, is **not** present, we have, asymptotically, that
 $$
 F_2 \sim F(1, K-P-1)
 $$
@@ -282,7 +274,7 @@ class: inverse
 
 **Unfortunately!** 
 
-The inputs are not independent: the test statistic involves the sum of `\(|\mathcal{K}|\)` correlated Bernoulli RVs.
+The inputs are not independent: the test statistic `\(T_\alpha\)` involves the sum of `\(|\mathcal{K}|\)` correlated Bernoulli RVs.
 
 ![Correlation Between Inputs](figure/corAggTest.png)
 
@@ -319,7 +311,7 @@ class: inverse
     
 --
 
-    - more work to be done
+    - more work to be done: more general modulation frameworks; tracking down the final-taper influence; distribution for `\(T_\alpha\)`
     
 ---
 
@@ -336,7 +328,7 @@ class: inverse, middle
 - Contact me: [Email](mailto:wesleyburr@trentu.ca) or [Twitter](https://twitter.com/wsburr)
 - Joint work with Glen Takahara, Kian Blanchette, and Ben Ott
 - Slides created via the R package [xaringan](https://github.com/yihui/xaringan) by Yihui Xie
-- Slides and source at &lt;http://bit.ly/asc2023&gt;
+- Slides and source at &lt;http://bit.ly/asc2023_wsb&gt;
 
 &lt;br/&gt;
 
@@ -362,7 +354,19 @@ frequencies, of the frequency modulated signals.
 
 ## Linear Modulation, Simulation
 
-![Linear Modulation, White Background](figure/linmod.png)
+![Linear Modulation, White Noise Background](figure/linmod.png)
+
+---
+
+## SOHO, Spectrum
+
+![Power Spectrum, SOHO Data](figure/SOHOFinalSpectrum.png)
+
+---
+
+## FM Signals, Detected
+
+![Detection of FM Signals in SOHO Data](figure/F4PrimeFull.png)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="remark-latest.min.js"></script>
